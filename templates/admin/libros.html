@@ -10,7 +10,7 @@
                 </div>
                 <div class="card-body">
                     
-                    <form action="/admin/libros/guardar" method="post">
+                    <form action="/admin/libros/guardar" method="post" enctype="multipart/form-data">
 
                         <div class="mb-3">
                             <label for="txtNombre" class="form-label">Nombre:</label>
@@ -19,15 +19,15 @@
                         </div>
         
                         <div class="mb-3">
-                          <label for="txtimagen" class="form-label">Imagen</label>
-                          <input type="text"
-                            class="form-control" name="txtimagen" id="txtimagen" aria-describedby="helpId" placeholder="Seleccione la imagen">
+                          <label for="txtImagen" class="form-label">Imagen</label>
+                          <input type="file"
+                            class="form-control" name="txtImagen" id="txtImagen" aria-describedby="helpId" placeholder="Seleccione la imagen">
                         </div>
         
                         <div class="mb-3">
-                            <label for="txtURL" class="form-label">URL Descarga:</label>
+                            <label for="txtUrl" class="form-label">URL Descarga:</label>
                             <input type="text"
-                              class="form-control" name="txtURL" id="txtURL" aria-describedby="helpId" placeholder="Escriba la URL de descarga">
+                              class="form-control" name="txtUrl" id="txtUrl" aria-describedby="helpId" placeholder="Escriba la URL de descarga">
                           </div>
         
                           <button type="submit" class="btn btn-primary">Agregar</button>
