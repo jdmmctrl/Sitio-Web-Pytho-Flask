@@ -56,13 +56,24 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="">
-                            <td scope="row">1</td>
-                            <td>Python</td>
-                            <td>Imagen.jpg</td>
-                            <td>URL</td>
-                            <td>Editar | Eliminar</td>
+                        {% for libro in libros %}
+
+                        <tr>
+                            <td>{{ libro[0] }}</td>
+                            <td>{{ libro[1] }}</td>
+                            <td>{{ libro[2] }}</td>
+                            <td>{{ libro[3] }}</td>
+                            <td>
+
+                                <form action="/admin/libros/borrar" method="post">
+                                    <input value="{{ libro[0] }}" type="text" name="txtID" id="txtID">
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                </form>
+
+                            </td>
                         </tr>
+
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
